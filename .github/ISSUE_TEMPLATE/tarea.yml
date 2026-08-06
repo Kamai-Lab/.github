@@ -1,0 +1,98 @@
+name: Tarea asignada
+description: Trabajo ya decidido, con owner y fecha. Si todavia se esta proponiendo, usa Feature Request.
+title: "[Tarea]: "
+labels: ["task", "status:assigned"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Esta plantilla es para trabajo ya acordado. No pasa por revision de maintainer.
+
+  - type: input
+    id: owner
+    attributes:
+      label: Owner
+      description: Una sola persona. Si son dos, son dos tareas.
+      placeholder: "@walter"
+    validations:
+      required: true
+
+  - type: input
+    id: objetivo
+    attributes:
+      label: Fecha objetivo
+      placeholder: "2026-08-07"
+    validations:
+      required: true
+
+  - type: input
+    id: hito
+    attributes:
+      label: Fase o hito
+      placeholder: "Fase 02 - primera demostracion"
+
+  - type: input
+    id: dependencias
+    attributes:
+      label: Depende de / Bloquea
+      description: Referencias a otros issues. De aca sale la prioridad real.
+      placeholder: "Depende de #12 · Bloquea #14"
+
+  - type: textarea
+    id: accesos-necesarios
+    attributes:
+      label: Accesos necesarios antes de arrancar
+      description: >
+        ¿Esta tarea necesita algun dato, credencial o acceso que hoy
+        solo tengo yo? Si si, se resuelve ANTES de asignar la tarea,
+        no a mitad de camino.
+
+  - type: textarea
+    id: porque
+    attributes:
+      label: Por que
+      description: Que no existe o que se rompe si esto no se hace. Una o dos lineas.
+    validations:
+      required: true
+
+  - type: textarea
+    id: que-hacer
+    attributes:
+      label: Que hacer
+      description: Rutas de archivo reales, endpoints reales, nombres reales.
+    validations:
+      required: true
+
+  - type: textarea
+    id: autoridad-decision
+    attributes:
+      label: Autoridad de decision
+      description: >
+        Que podes decidir vos sin preguntar, y que necesita mi OK antes de
+        avanzar. Si algo sale mal y se arregla con un commit, es tuyo. Si
+        afecta algo ya acordado con el cliente, pregunta antes.
+    validations:
+      required: true
+
+  - type: textarea
+    id: terminado
+    attributes:
+      label: Terminado cuando
+      description: Criterios verificables por un tercero. Uno por linea, con "- [ ]".
+      value: |
+        - [ ] 
+        - [ ] 
+    validations:
+      required: true
+
+  - type: textarea
+    id: trampas
+    attributes:
+      label: Trampas conocidas
+      description: Lo que ya sabemos que falla, con el sintoma exacto. Si lo sabes y no lo escribis, lo va a descubrir perdiendo un dia.
+
+  - type: textarea
+    id: fuera-de-alcance
+    attributes:
+      label: Fuera de alcance
+      description: Lo que alguien podria asumir que entra y no entra.
