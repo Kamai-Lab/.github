@@ -2,16 +2,13 @@
 
 ## Nomenclatura de repos
 
-El prefijo depende de qué team lo va a usar:
+El prefijo indica el team, seguido del nombre del proyecto:
 
-- **`implementex-devs`** (trabajo de cliente) → `cliente-proyecto`
-  Ejemplo: `laofrenda-conciliacion`
+- `implementex-proyecto` — trabajo de cliente (implementex-devs)
+- `implementin-proyecto` — herramientas propias de Kamai (implementin-devs)
+- `vibecodianos-proyecto` — experimentos, no oficial (vibecodianos-devs)
 
-- **`implementin-devs`** (herramientas propias de Kamai) → `interno-proyecto`
-  Ejemplo: `interno-webpublica`
-
-- **`vibecodianos-devs`** (experimentos, no oficial) → `vibe-proyecto`
-  Ejemplo: `vibe-sync-tasks`
+Ejemplo: `implementex-market-research`
 
 Siempre en minúsculas, sin espacios.
 
