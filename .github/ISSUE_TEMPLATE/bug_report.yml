@@ -64,7 +64,7 @@ body:
     id: payload
     attributes:
       label: Capturaste la respuesta cruda que lo produjo?
-      description: En este repo un fixture real ya desmintio tres suposiciones de una sola vez. Si la tenes, adjuntala.
+      description: En este repo un fixture real ya desmintio tres suposiciones de una sola vez. Si la tienes, adjúntala.
       options:
         - Si, la adjunto abajo
         - Si, ya esta en tests/fixtures/
