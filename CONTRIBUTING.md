@@ -5,15 +5,15 @@
 El prefijo indica el team. En trabajo de cliente va también el nombre del cliente:
 
 - `implementex-cliente-proyecto` — trabajo de cliente (implementex-devs)
-- `implementin-proyecto` — herramientas propias de Kamai (implementin-devs)
+- `implementin-kamai-proyecto` — producto propio de KAMAI, el cliente somos nosotros (implementin-devs)
 - `vibecoding-proyecto` — experimentos, no oficial (vibecodianos)
 
 Ejemplos:
 - `implementex-laofrenda-conciliacion`
-- `implementin-website`
+- `implementin-kamai-website`
 - `vibecoding-sync-tasks`
 
-El nombre del cliente es obligatorio en los repos de `implementex`: sin él no hay
+El nombre del cliente es obligatorio: sin él no hay
 forma de saber de quién es cada proyecto, ni de responder rápido si un cliente
 pregunta quién tiene acceso a sus datos.
 
