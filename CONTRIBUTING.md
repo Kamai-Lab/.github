@@ -2,25 +2,32 @@
 
 ## Nomenclatura de repos
 
-El prefijo indica el team, seguido del nombre del proyecto:
+El prefijo indica el team. En trabajo de cliente va también el nombre del cliente:
 
-- `implementex-proyecto` — trabajo de cliente (implementex-devs)
+- `implementex-cliente-proyecto` — trabajo de cliente (implementex-devs)
 - `implementin-proyecto` — herramientas propias de Kamai (implementin-devs)
 - `vibecoding-proyecto` — experimentos, no oficial (vibecodianos)
 
-Ejemplo: `implementex-market-research`
+Ejemplos:
+- `implementex-laofrenda-conciliacion`
+- `implementin-website`
+- `vibecoding-sync-tasks`
+
+El nombre del cliente es obligatorio en los repos de `implementex`: sin él no hay
+forma de saber de quién es cada proyecto, ni de responder rápido si un cliente
+pregunta quién tiene acceso a sus datos.
 
 Siempre en minúsculas, sin espacios.
 
 ## Al crear un repo nuevo
-GitHub no conecta un repo nuevo a ningún team automáticamente. Paso manual obligatorio:
+
+Usa la plantilla `repo-template` con el botón **Use this template**. Después:
 
 1. Settings del repo → **Collaborators and teams**
-2. **Add teams** → elegí el team correspondiente (`implementin-devs`, `implementex-devs`, `vibecodianos`)
-3. Asigná permiso **Write**
+2. **Add teams** → elige el team correspondiente (`implementin-devs`, `implementex-devs`, `vibecodianos`)
+3. Asigna permiso **Write**
 
-## CODEOWNERS
-Todo repo con trabajo real necesita su propio `.github/CODEOWNERS` (no se hereda desde este repo). Antes de nombrar a alguien ahí, confirmá que tiene Write explícito en ese repo puntual — sin eso, GitHub no lo pide como reviewer.
+GitHub no conecta un repo nuevo a ningún team automáticamente. Es un paso manual obligatorio.
 
 ## Formato de commits
 
@@ -41,14 +48,31 @@ Conventional commits, spec oficial (conventionalcommits.org): `tipo(alcance): de
 
 Ejemplos:
 - `feat(conciliacion): agregar match por OCR de comprobantes`
-- `fix(sms): corregir formato de telefono en el envio`
+- `fix(sms): corregir formato de teléfono en el envío`
 - `chore(deps): actualizar dependencias de seguridad`
 
-El scope (lo que va entre paréntesis) es opcional, pero ayuda a ubicar rápido qué parte del proyecto tocó el commit.
+El scope (lo que va entre paréntesis) es opcional, pero ayuda a ubicar rápido qué
+parte del proyecto tocó el commit.
+
+Hay un check automático que valida el título del PR contra esta convención.
+
+## Review
+
+Nadie aprueba su propio PR. El review no es un trámite de jerarquía: existe porque
+quien escribió el código ya no lo ve con ojos frescos.
 
 ## Flujo de labels en un issue
+
 `status:needs-review` (recién creado) → `status:assigned` (tiene owner y arrancó) → `status:approved` (listo para PR).
 
 ## Templates
-No se abren issues en blanco salvo que seas maintainer. Usá el template que corresponda: bug, feature, o tarea asignada.
+
+No se abren issues en blanco salvo que seas maintainer. Usa el template que
+corresponda: bug, feature, o tarea asignada.
+
+## Seguridad
+
+- 2FA obligatorio para operar en la organización.
+- Nunca compartir credenciales por chat. Van en un gestor de contraseñas o en Actions secrets.
+- Nunca commitear tokens, API keys ni contraseñas. Si pasa: rotar primero, limpiar el historial después.
 
