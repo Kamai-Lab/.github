@@ -43,8 +43,8 @@ body:
     attributes:
       label: Accesos necesarios antes de arrancar
       description: >
-        ¿Esta tarea necesita algun dato, credencial o acceso que hoy
-        solo tengo yo? Si si, se resuelve ANTES de asignar la tarea,
+        Esta tarea necesita algun dato, credencial o acceso que hoy
+        solo tengo yo? Si es asi, se resuelve ANTES de asignar la tarea,
         no a mitad de camino.
 
   - type: textarea
@@ -68,7 +68,7 @@ body:
     attributes:
       label: Autoridad de decision
       description: >
-        Que podes decidir vos sin preguntar, y que necesita mi OK antes de
+        Que puedes decidir tu sin preguntar, y que necesita mi OK antes de
         avanzar. Si algo sale mal y se arregla con un commit, es tuyo. Si
         afecta algo ya acordado con el cliente, pregunta antes.
     validations:
@@ -89,7 +89,7 @@ body:
     id: trampas
     attributes:
       label: Trampas conocidas
-      description: Lo que ya sabemos que falla, con el sintoma exacto. Si lo sabes y no lo escribis, lo va a descubrir perdiendo un dia.
+      description: Lo que ya sabemos que falla, con el sintoma exacto. Si lo sabes y no lo escribes, lo va a descubrir perdiendo un dia.
 
   - type: textarea
     id: fuera-de-alcance
