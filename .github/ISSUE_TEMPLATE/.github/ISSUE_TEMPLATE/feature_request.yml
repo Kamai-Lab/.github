@@ -1,0 +1,59 @@
+name: Propuesta de mejora
+description: Una capacidad que todavia no existe y hay que decidir si entra.
+title: "[Feat]: "
+labels: ["enhancement", "status:needs-review"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Esto es una propuesta: puede rechazarse o diferirse.
+        Si el trabajo ya esta decidido y tiene owner, usa **Tarea asignada**.
+
+  - type: textarea
+    id: problema
+    attributes:
+      label: Problema
+      description: Que duele hoy. Si no duele, no es una mejora.
+    validations:
+      required: true
+
+  - type: textarea
+    id: solucion
+    attributes:
+      label: Solucion propuesta
+      description: Como se comporta desde el lado del analista, no como se implementa.
+    validations:
+      required: true
+
+  - type: dropdown
+    id: etapa
+    attributes:
+      label: Etapa afectada
+      options:
+        - Ingesta de correo (Graph)
+        - Ingesta de X (Apify)
+        - Limpieza de HTML, imagenes y notas
+        - Deposito del material de la corrida
+        - Generacion del resumen (rutina de Claude)
+        - Configuracion (research.toml, .env)
+        - CLI y orquestacion de la corrida
+        - Portales de research
+        - Transversal
+    validations:
+      required: true
+
+  - type: input
+    id: fase
+    attributes:
+      label: Fase donde entraria
+      placeholder: "Fase 03 - Portales y automatizacion"
+
+  - type: textarea
+    id: alternativas
+    attributes:
+      label: Alternativas consideradas
+
+  - type: textarea
+    id: contexto
+    attributes:
+      label: Contexto adicional
