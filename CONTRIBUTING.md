@@ -6,7 +6,7 @@ El prefijo indica el team, seguido del nombre del proyecto:
 
 - `implementex-proyecto` — trabajo de cliente (implementex-devs)
 - `implementin-proyecto` — herramientas propias de Kamai (implementin-devs)
-- `vibecodianos-proyecto` — experimentos, no oficial (vibecodianos-devs)
+- `vibecoding-proyecto` — experimentos, no oficial (vibecodianos-devs)
 
 Ejemplo: `implementex-market-research`
 
