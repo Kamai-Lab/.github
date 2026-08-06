@@ -6,7 +6,7 @@ El prefijo indica el team, seguido del nombre del proyecto:
 
 - `implementex-proyecto` — trabajo de cliente (implementex-devs)
 - `implementin-proyecto` — herramientas propias de Kamai (implementin-devs)
-- `vibecoding-proyecto` — experimentos, no oficial (vibecodianos-devs)
+- `vibecoding-proyecto` — experimentos, no oficial (vibecodianos)
 
 Ejemplo: `implementex-market-research`
 
@@ -16,7 +16,7 @@ Siempre en minúsculas, sin espacios.
 GitHub no conecta un repo nuevo a ningún team automáticamente. Paso manual obligatorio:
 
 1. Settings del repo → **Collaborators and teams**
-2. **Add teams** → elegí el team correspondiente (`implementin-devs`, `implementex-devs`, `vibecodianos-devs`)
+2. **Add teams** → elegí el team correspondiente (`implementin-devs`, `implementex-devs`, `vibecodianos`)
 3. Asigná permiso **Write**
 
 ## CODEOWNERS
