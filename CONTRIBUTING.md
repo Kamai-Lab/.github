@@ -1,7 +1,19 @@
 # Cómo se trabaja en Kamai-Lab
 
 ## Nomenclatura de repos
-`cliente-proyecto` — en minúsculas, sin espacios. Ejemplo: `laofrenda-conciliacion`.
+
+El prefijo depende de qué team lo va a usar:
+
+- **`implementex-devs`** (trabajo de cliente) → `cliente-proyecto`
+  Ejemplo: `laofrenda-conciliacion`
+
+- **`implementin-devs`** (herramientas propias de Kamai) → `interno-proyecto`
+  Ejemplo: `interno-webpublica`
+
+- **`vibecodianos-devs`** (experimentos, no oficial) → `vibe-proyecto`
+  Ejemplo: `vibe-sync-tasks`
+
+Siempre en minúsculas, sin espacios.
 
 ## Al crear un repo nuevo
 GitHub no conecta un repo nuevo a ningún team automáticamente. Paso manual obligatorio:
