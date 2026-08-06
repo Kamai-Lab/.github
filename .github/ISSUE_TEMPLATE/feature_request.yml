@@ -1,5 +1,5 @@
 name: Propuesta de mejora
-description: Una capacidad que todavia no existe y hay que decidir si entra.
+description: Una capacidad que todavía no existe y hay que decidir si entra.
 title: "[Feat]: "
 labels: ["enhancement", "status:needs-review"]
 body:
@@ -7,46 +7,49 @@ body:
     attributes:
       value: |
         Esto es una propuesta: puede rechazarse o diferirse.
-        Si el trabajo ya esta decidido y tiene owner, usa **Tarea asignada**.
+        Si el trabajo ya está decidido y tiene owner, usa **Tarea asignada**.
 
   - type: textarea
     id: problema
     attributes:
       label: Problema
-      description: Que duele hoy. Si no duele, no es una mejora.
+      description: Qué duele hoy. Si no duele, no es una mejora.
     validations:
       required: true
 
   - type: textarea
     id: solucion
     attributes:
-      label: Solucion propuesta
-      description: Como se comporta desde el lado del analista, no como se implementa.
+      label: Solución propuesta
+      description: Cómo se comporta desde el lado de quien lo usa, no cómo se implementa.
+    validations:
+      required: true
+
+  - type: input
+    id: area
+    attributes:
+      label: Área afectada
+      description: Qué parte del proyecto cambia. Si toca varias, escribe "Transversal".
+      placeholder: "Login, reportes, integración con X, Transversal..."
     validations:
       required: true
 
   - type: dropdown
-    id: etapa
+    id: impacto
     attributes:
-      label: Etapa afectada
+      label: A quién beneficia
       options:
-        - Ingesta de correo (Graph)
-        - Ingesta de X (Apify)
-        - Limpieza de HTML, imagenes y notas
-        - Deposito del material de la corrida
-        - Generacion del resumen (rutina de Claude)
-        - Configuracion (research.toml, .env)
-        - CLI y orquestacion de la corrida
-        - Portales de research
-        - Transversal
+        - Al cliente final
+        - Al equipo interno
+        - A ambos
     validations:
       required: true
 
   - type: input
     id: fase
     attributes:
-      label: Fase donde entraria
-      placeholder: "Fase 03 - Portales y automatizacion"
+      label: Fase o hito donde entraría
+      placeholder: "Fase 03, próximo sprint, sin definir..."
 
   - type: textarea
     id: alternativas
@@ -57,3 +60,4 @@ body:
     id: contexto
     attributes:
       label: Contexto adicional
+
