@@ -1,46 +1,44 @@
 name: Reporte de defecto
-description: Algo que ya existe no hace lo que deberia.
+description: Algo que ya existe no hace lo que debería.
 title: "[Bug]: "
 labels: ["bug", "status:needs-review"]
 body:
   - type: textarea
     id: descripcion
     attributes:
-      label: Descripcion del defecto
+      label: Descripción del defecto
+    validations:
+      required: true
+
+  - type: input
+    id: area
+    attributes:
+      label: Área afectada
+      description: Qué parte del proyecto falla. Módulo, pantalla, endpoint o proceso.
+      placeholder: "Login, envío de correos, importación de datos..."
     validations:
       required: true
 
   - type: dropdown
-    id: etapa
+    id: origen
     attributes:
-      label: Etapa afectada
+      label: Dónde parece estar la falla
+      description: La mayoría de las fallas viven en el borde, no en nuestro código.
       options:
-        - Ingesta de correo (Graph)
-        - Ingesta de X (Apify)
-        - Limpieza de HTML, imagenes y notas
-        - Deposito del material de la corrida
-        - Generacion del resumen (rutina de Claude)
-        - Configuracion (research.toml, .env)
-        - CLI y orquestacion de la corrida
-        - Portales de research
-        - Otro / no se sabe
-    validations:
-      required: true
-
-  - type: dropdown
-    id: servicio
-    attributes:
-      label: Servicio externo involucrado
-      description: La mayoria de las fallas viven en el borde, no en nuestro codigo.
-      options:
-        - Microsoft Graph
-        - Apify
-        - Claude
-        - Google Drive / SharePoint
-        - Ninguno, es codigo nuestro
+        - En nuestro código
+        - En un servicio externo (API, proveedor, integración)
+        - En la configuración o el entorno
+        - En los datos de entrada
         - No se sabe
     validations:
       required: true
+
+  - type: input
+    id: servicio
+    attributes:
+      label: Servicio externo involucrado
+      description: Solo si aplica. Nombre del proveedor o API.
+      placeholder: "Microsoft Graph, Stripe, OpenAI..."
 
   - type: textarea
     id: reproducir
@@ -53,43 +51,37 @@ body:
     validations:
       required: true
 
-  - type: input
-    id: corrida
-    attributes:
-      label: Corrida donde ocurrio
-      description: Fecha y ventana. La salida depende del material, asi que sin esto no se reproduce.
-      placeholder: "2026-08-04, ventana 7:30"
-
-  - type: dropdown
-    id: payload
-    attributes:
-      label: Capturaste la respuesta cruda que lo produjo?
-      description: En este repo un fixture real ya desmintio tres suposiciones de una sola vez. Si la tienes, adjúntala.
-      options:
-        - Si, la adjunto abajo
-        - Si, ya esta en tests/fixtures/
-        - No, no la capture
-        - No aplica
-    validations:
-      required: true
-
   - type: textarea
     id: esperado
     attributes:
-      label: Que deberia haber pasado
+      label: Qué debería haber pasado
     validations:
       required: true
 
   - type: textarea
     id: real
     attributes:
-      label: Que paso en cambio
-      description: Error exacto, con el codigo si lo hay (ej. IDX14100).
+      label: Qué pasó en cambio
+      description: Error exacto, con el código si lo hay.
+    validations:
+      required: true
+
+  - type: dropdown
+    id: evidencia
+    attributes:
+      label: ¿Tienes la evidencia que lo produjo?
+      description: Payload crudo, captura, archivo de entrada. Un caso real vale más que una descripción.
+      options:
+        - Sí, la adjunto abajo
+        - Sí, ya está en el repo
+        - No la capturé
+        - No aplica
     validations:
       required: true
 
   - type: textarea
     id: logs
     attributes:
-      label: Logs o payload
+      label: Logs o evidencia
       render: shell
+
