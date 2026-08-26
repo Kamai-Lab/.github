@@ -1,7 +1,8 @@
 name: Reporte de defecto
 description: Algo que ya existe no hace lo que debería.
 title: "[Bug]: "
-labels: ["bug", "status:needs-review"]
+labels: ["status:needs-review"]
+type: Bug
 body:
   - type: textarea
     id: descripcion
