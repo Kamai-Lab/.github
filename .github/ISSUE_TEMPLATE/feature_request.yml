@@ -1,7 +1,8 @@
 name: Propuesta de mejora
 description: Una capacidad que todavía no existe y hay que decidir si entra.
 title: "[Feat]: "
-labels: ["enhancement", "status:needs-review"]
+labels: ["status:needs-review"]
+type: Feature
 body:
   - type: markdown
     attributes:
