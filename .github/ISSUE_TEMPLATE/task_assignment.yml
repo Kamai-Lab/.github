@@ -1,27 +1,15 @@
 name: Tarea asignada
-description: Trabajo ya decidido, con owner y fecha. Si todavia se esta proponiendo, usa Feature Request.
-title: "[Tarea]: "
+description: Trabajo ya acordado y con responsable. Si todavia se esta proponiendo, usa Propuesta de mejora.
+title: ""
 labels: ["status:assigned"]
-type: Task
 body:
   - type: markdown
     attributes:
       value: |
         Esta plantilla es para trabajo ya acordado. No pasa por revision de maintainer.
 
-  - type: input
-    id: objetivo
-    attributes:
-      label: Fecha objetivo
-      placeholder: "2026-08-07"
-    validations:
-      required: true
-
-  - type: input
-    id: hito
-    attributes:
-      label: Fase o hito
-      placeholder: "Fase 02 - primera demostracion"
+        Antes de enviar, define en la barra lateral: **Type** (Bug, Feature o Task),
+        **Assignees**, y los campos **Priority**, **Effort** y **Target date**.
 
   - type: input
     id: dependencias
