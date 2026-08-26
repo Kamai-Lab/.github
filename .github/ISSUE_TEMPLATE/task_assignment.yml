@@ -1,21 +1,13 @@
 name: Tarea asignada
 description: Trabajo ya decidido, con owner y fecha. Si todavia se esta proponiendo, usa Feature Request.
 title: "[Tarea]: "
-labels: ["task", "status:assigned"]
+labels: ["status:assigned"]
+type: Task
 body:
   - type: markdown
     attributes:
       value: |
         Esta plantilla es para trabajo ya acordado. No pasa por revision de maintainer.
-
-  - type: input
-    id: owner
-    attributes:
-      label: Owner
-      description: Una sola persona. Si son dos, son dos tareas.
-      placeholder: "@walter"
-    validations:
-      required: true
 
   - type: input
     id: objetivo
